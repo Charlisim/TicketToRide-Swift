@@ -4,4 +4,4 @@ language: swift
 xcode_project: TicketToRideRules.xcodeproj
 xcode_scheme: TicketToRideRules
 script:
-    - xcodebuild -project TicketToRideRules.xcodeproj -scheme TicketToRideRules -destination platform\=macOS build test
+    - set -o pipefail && xcodebuild -project TicketToRideRules.xcodeproj -scheme TicketToRideRules -destination platform\=macOS build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
