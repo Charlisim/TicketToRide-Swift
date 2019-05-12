@@ -55,10 +55,10 @@ class MockData{
         lines.append(Line(start: brest, end: diepe, cost: LineCost.build(type: .orange, number: 2)))
         lines.append(Line(start: diepe, end: london, cost: LineCost.build(type: .red, number: 2)))
         lines.append(Line(start: edinburg, end: london, cost: LineCost.build(type: .red, number: 4)))
-        lines.append(Line(start: amsterdam, end: london, cost: LineCost.build(type: .jocker, number: 2)))
+        lines.append(Line(start: amsterdam, end: london, cost: LineCost.build(type: .locomotive, number: 2)))
         lines.append(Line(start: amsterdam, end: essen, cost: LineCost.build(type: .yellow, number: 3)))
         
-        lines.append(Line(start: essen, end: copenhagen, cost: LineCost.build(type: .jocker, number: 1) + LineCost.build(anyWithNumberOfCards: 2)))
+        lines.append(Line(start: essen, end: copenhagen, cost: LineCost.build(type: .locomotive, number: 1) + LineCost.build(anyWithNumberOfCards: 2)))
         
         lines.append(Line(start: copenhagen, end: stockholm, cost: LineCost.build(type: .yellow, number: 3)))
         

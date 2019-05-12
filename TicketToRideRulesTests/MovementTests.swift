@@ -17,7 +17,7 @@ class MovementTests: XCTestCase {
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(type: .red, number: 3))
         let fakeHand = Hand(cardTypes: [.red, .blue, .red, .green, .red])
-        let fakeMarket = Market(cardTypes: [.jocker, .black, .blue, .orange, .pink])
+        let fakeMarket = Market(cardTypes: [.locomotive, .black, .blue, .orange, .pink])
         
         let sut = Movement()
         
@@ -29,8 +29,8 @@ class MovementTests: XCTestCase {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(type: .red, number: 3))
-        let fakeHand = Hand(cardTypes: [.red, .red, .jocker, .green, .blue])
-        let fakeMarket = Market(cardTypes: [.jocker, .red, .blue, .red])
+        let fakeHand = Hand(cardTypes: [.red, .red, .locomotive, .green, .blue])
+        let fakeMarket = Market(cardTypes: [.locomotive, .red, .blue, .red])
         let sut = Movement()
 
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -41,8 +41,8 @@ class MovementTests: XCTestCase {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(type: .red, number: 3))
-        let fakeHand = Hand(cardTypes: [.red, .red, .jocker, .green, .blue, .red, .red])
-        let fakeMarket = Market(cardTypes: [.jocker, .red, .blue, .red])
+        let fakeHand = Hand(cardTypes: [.red, .red, .locomotive, .green, .blue, .red, .red])
+        let fakeMarket = Market(cardTypes: [.locomotive, .red, .blue, .red])
         let sut = Movement()
         
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -53,8 +53,8 @@ class MovementTests: XCTestCase {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3))
-        let fakeHand = Hand(cardTypes: [.green, .green, .jocker, .green, .blue, .red, .red])
-        let fakeMarket = Market(cardTypes: [.jocker, .red, .blue, .red])
+        let fakeHand = Hand(cardTypes: [.green, .green, .locomotive, .green, .blue, .red, .red])
+        let fakeMarket = Market(cardTypes: [.locomotive, .red, .blue, .red])
         let sut = Movement()
         
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -63,9 +63,9 @@ class MovementTests: XCTestCase {
     func testCanAnyColorLinePlusJockerWithHand() {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
-        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .jocker)])
-        let fakeHand = Hand(cardTypes: [.green, .green, .jocker, .green, .blue, .red, .red])
-        let fakeMarket = Market(cardTypes: [.jocker, .red, .blue, .red])
+        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .locomotive)])
+        let fakeHand = Hand(cardTypes: [.green, .green, .locomotive, .green, .blue, .red, .red])
+        let fakeMarket = Market(cardTypes: [.locomotive, .red, .blue, .red])
         let sut = Movement()
         
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -74,7 +74,7 @@ class MovementTests: XCTestCase {
     func testCantBuildAnyColorLinePlusJockerWithHand() {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
-        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .jocker)])
+        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .locomotive)])
         let fakeHand = Hand(cardTypes: [.green, .green, .green, .green, .blue, .red, .red])
         let fakeMarket = Market(cardTypes: [.pink, .black, .blue, .black])
         let sut = Movement()
@@ -109,7 +109,7 @@ class MovementTests: XCTestCase {
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(type: .red, number: 3))
         let fakeHand = Hand(cardTypes: [.green, .green, .green, .green, .blue, .red, .red])
-        let fakeMarket = Market(cardTypes: [.pink, .jocker, .blue, .black])
+        let fakeMarket = Market(cardTypes: [.pink, .locomotive, .blue, .black])
         let sut = Movement()
         
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -118,9 +118,9 @@ class MovementTests: XCTestCase {
     func testCanBuildAnyColorLinePlusJockerWithMarket() {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
-        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .jocker)])
+        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .locomotive)])
         let fakeHand = Hand(cardTypes: [.green, .green, .green, .red, .blue, .red, .red])
-        let fakeMarket = Market(cardTypes: [.pink, .jocker, .blue, .black])
+        let fakeMarket = Market(cardTypes: [.pink, .locomotive, .blue, .black])
         let sut = Movement()
         
         let result = sut.calculateBuild(route, withCardsInHand: fakeHand, market: fakeMarket)
@@ -130,7 +130,7 @@ class MovementTests: XCTestCase {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
         let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3))
-        let fakeHand = Hand(cardTypes: [.green, .green, .black, .jocker, .blue, .red, .red])
+        let fakeHand = Hand(cardTypes: [.green, .green, .black, .locomotive, .blue, .red, .red])
         let fakeMarket = Market(cardTypes: [.pink, .red, .green, .black])
         let sut = Movement()
         
@@ -140,7 +140,7 @@ class MovementTests: XCTestCase {
     func testCantBuildAnyColorLinePlusJockerWithMarket() {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
-        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .jocker)])
+        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .locomotive)])
         let fakeHand = Hand(cardTypes: [.green, .green, .green, .red, .blue, .red, .red])
         let fakeMarket = Market(cardTypes: [.pink, .blue, .blue, .black, .orange])
         let sut = Movement()
@@ -151,8 +151,8 @@ class MovementTests: XCTestCase {
     func testCanBuildTakingMarketTakingBlue() {
         let cadiz = Station(name: "Cadiz")
         let madrid = Station(name: "Madrid")
-        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .jocker)])
-        let fakeHand = Hand(cardTypes: [.green, .green, .jocker, .blue, .red, .red])
+        let route = Line(start: cadiz, end: madrid, cost: LineCost.build(anyWithNumberOfCards: 3) + [LineCost(cardType: .locomotive)])
+        let fakeHand = Hand(cardTypes: [.green, .green, .locomotive, .blue, .red, .red])
         let fakeMarket = Market(cardTypes: [.pink, .blue, .blue, .black])
         let sut = Movement()
         

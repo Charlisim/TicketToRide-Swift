@@ -83,7 +83,7 @@ let munchen = board.addStation(Station(name: "Munchen"))
 
 
 
-let fakeHand = Hand(cards: [.init(type: .red), .init(type: .blue), .init(type: .jocker)])
+let fakeHand = Hand(cards: [.init(type: .red), .init(type: .blue), .init(type: .locomotive)])
 
 //Movement().canBuildLine(route, withCardsInHand: fakeHand)
 
@@ -103,10 +103,10 @@ board.addLine(Line(start: diepe, end: paris, cost: LineCost.build(type: .pink, n
 board.addLine(Line(start: brest, end: diepe, cost: LineCost.build(type: .orange, number: 2)))
 board.addLine(Line(start: diepe, end: london, cost: LineCost.build(type: .red, number: 2)))
 board.addLine(Line(start: edinburg, end: london, cost: LineCost.build(type: .red, number: 4)))
-board.addLine(Line(start: amsterdam, end: london, cost: LineCost.build(type: .jocker, number: 2)))
+board.addLine(Line(start: amsterdam, end: london, cost: LineCost.build(type: .locomotive, number: 2)))
 board.addLine(Line(start: amsterdam, end: essen, cost: LineCost.build(type: .yellow, number: 3)))
 
-board.addLine(Line(start: essen, end: copenhagen, cost: LineCost.build(type: .jocker, number: 1) + LineCost.build(anyWithNumberOfCards: 2)))
+board.addLine(Line(start: essen, end: copenhagen, cost: LineCost.build(type: .locomotive, number: 1) + LineCost.build(anyWithNumberOfCards: 2)))
 
 board.addLine(Line(start: copenhagen, end: stockholm, cost: LineCost.build(type: .yellow, number: 3)))
 

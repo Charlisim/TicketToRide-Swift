@@ -83,7 +83,7 @@ public struct Movement{
         }
         let handSet = hand.cards.compactMap({ $0.type })
         var bin:[CardType] = []
-        for element in handSet where lineSet.contains(element) || element == .jocker{
+        for element in handSet where lineSet.contains(element) || element == .locomotive{
             bin.append(element)
         }
         return bin.count >= lineSet.count && canBuild
@@ -103,7 +103,7 @@ public struct Movement{
         let lineSet = line.cost.compactMap({ $0.cardType })
         let handSet = hand.cards.compactMap({ $0.type })
         var bin:[CardType] = []
-        for element in handSet where lineSet.contains(element) || element == .jocker{
+        for element in handSet where lineSet.contains(element) || element == .locomotive{
             bin.append(element)
         }
         guard !lineSet.isEmpty else{
@@ -114,7 +114,7 @@ public struct Movement{
             return possibleCombinations
         }
         
-        return [MatchingResult(cardType: .jocker, needs: neededCards), MatchingResult(cardType: cardTypeNeeded, needs: neededCards)]
+        return [MatchingResult(cardType: .locomotive, needs: neededCards), MatchingResult(cardType: cardTypeNeeded, needs: neededCards)]
         
     }
 }

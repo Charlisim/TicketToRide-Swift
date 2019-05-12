@@ -2,5 +2,6 @@ os: osx
 osx_image: xcode10.2
 language: swift
 xcode_project: TicketToRideRules.xcodeproj
-xcode_scheme: TicketToRideRulesTests
-xcode_destination: platform=macOS
+xcode_scheme: TicketToRideRules
+script:
+    - xcodebuild -project TicketToRideRules.xcodeproj -scheme TicketToRideRules -destination platform\=macOS build test

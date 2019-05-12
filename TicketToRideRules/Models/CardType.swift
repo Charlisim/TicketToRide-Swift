@@ -13,7 +13,7 @@ public enum CardType: String, CaseIterable, CustomStringConvertible{
     case white
     case yellow
     case green
-    case jocker
+    case locomotive
     case black
     case blue
     case orange
