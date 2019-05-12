@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TicketToRideRules/Models/Movement.swift"
+            timestampString = "579128652.253332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "calculateBuild(_:withCardsInHand:market:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TicketToRideRules/Models/Game.swift"
+            timestampString = "579343615.04756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(players:routes:deck:board:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicketToRideRules.Game.init(players: Swift.Array&lt;TicketToRideRules.Player&gt;, routes: Swift.Array&lt;TicketToRideRules.Route&gt;, deck: TicketToRideRules.Deck, board: TicketToRideRules.Board) -&gt; TicketToRideRules.Game"
+                  moduleName = "TicketToRideRules"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csimon/Documents/002%20-%20Trabajo/Proyectos/TicketToRideRules/TicketToRideRules/Models/Game.swift"
+                  timestampString = "579128384.7385319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TicketToRideRules.Line) -&gt; TicketToRideRules.LineStatus in TicketToRideRules.Game.init(players: Swift.Array&lt;TicketToRideRules.Player&gt;, routes: Swift.Array&lt;TicketToRideRules.Route&gt;, deck: TicketToRideRules.Deck, board: TicketToRideRules.Board) -&gt; TicketToRideRules.Game"
+                  moduleName = "TicketToRideRules"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csimon/Documents/002%20-%20Trabajo/Proyectos/TicketToRideRules/TicketToRideRules/Models/Game.swift"
+                  timestampString = "579128384.743735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TicketToRideRules.LineStatus) -&gt; () in TicketToRideRules.Game.init(players: Swift.Array&lt;TicketToRideRules.Player&gt;, routes: Swift.Array&lt;TicketToRideRules.Route&gt;, deck: TicketToRideRules.Deck, board: TicketToRideRules.Board) -&gt; TicketToRideRules.Game"
+                  moduleName = "TicketToRideRules"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csimon/Documents/002%20-%20Trabajo/Proyectos/TicketToRideRules/TicketToRideRules/Models/Game.swift"
+                  timestampString = "579128384.7529041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
